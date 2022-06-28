@@ -15,9 +15,9 @@
 }
 .navbar{
     grid-area: navbar;
-    background-color: deeppink;  
+    background-color: gainsboro;  
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
 }
 .navbar ul {
@@ -29,7 +29,7 @@
 }
 .navbar ul li a{
     text-decoration: none;
-    color:  white;
+    color:  deeppink;
     font-size: 24px;
     font-family: 'Open Sans';
 }
