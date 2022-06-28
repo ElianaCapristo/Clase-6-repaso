@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+   display: grid; 
+   grid-template-columns: repeat(4,1fr);
+   gap: 10px;
+   grid-template-rows: 80px 300px auto  auto 80px;
+   grid-template-areas: "navbar navbar navbar navbar"
+                         "header header header header"
+                         "main   main   main   main" 
+                         "sidebar sidebar sidebar sidebar"
+                         "footer footer footer footer";
+}
+.navbar{
+    grid-area: navbar;
+    background-color: deeppink;  
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    padding: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:  white;
+    font-size: 24px;
+    font-family: 'Open Sans';
+}
+.header{
+    grid-area: header;
+    background-image:url(../img/7.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+.headerInfo{
+    padding: 10px;
+    margin: 1px;
+}
+.header h1{
+    color: white;
+}
+.header p {
+    color: deeppink;
+}
+.btn{
+   width: 100px; 
+   background-color: deeppink;
+   border: none;
+   padding: 5px 5px;
+   border-radius: 5px;
+   color: white;
+   margin: 10px;
+}
+.main{
+    grid-area: main;
+}
+.main h2{
+ margin: 10px;
+}
+.card {
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+    
+}
+.card img{
+    width: 150px;
+}
+.cardInfo{
+    width: 240px;
+    padding: 10px;
+}
+.sidebar{
+   grid-area: sidebar;
+   
+}
+.footer{
+    grid-area: footer;
+    
+    
+}
+
+@media(min-width:576px){
+    .container{
+
+        grid-template-rows: 80px 250px auto  80px;
+        grid-template-areas:  "navbar  navbar navbar navbar"
+                              "header  header header header"
+                              "main    main   main   sidebar" 
+                              "footer  footer footer footer";
+
+    }
+}
+@media(min-width:768px){
+    .container{
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 80px 300px auto  80px;
+        grid-template-areas: "navbar  navbar navbar navbar  navbar   navbar"
+                              "header header header header  header   header"
+                              "main   main   main   main    sidebar  sidebar" 
+                              "footer footer footer footer  footer   footer";
+
+    }
+}
